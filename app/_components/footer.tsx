@@ -46,7 +46,7 @@ export default function Footer() {
               <IconBrandGithub className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
             </Link>
             <Link href="https://www.buymeacoffee.com/tonyliang6">
-              <img
+              <Image
                 src="bmc-logo.svg"
                 className="w-6 h-6"
                 alt="Buy me a coffee"
