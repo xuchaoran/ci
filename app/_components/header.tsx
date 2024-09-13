@@ -1,12 +1,13 @@
 import { Icons } from "@/components/common/icons";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <header className="flex justify-between items-center py-4 px-6 bg-white shadow-sm">
       <div className="flex items-center">
         <Link href="/" className="flex items-center">
-          <img
+          <Image
             src="/logo.svg"
             className="rounded"
             alt="Logo"
@@ -42,7 +43,7 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="bmc-logo.svg" className="w-6 h-6" alt="Buy me a coffee" />
+          <Image src="bmc-logo.svg" className="w-6 h-6" alt="Buy me a coffee" />
         </Link> */}
       </div>
     </header>
