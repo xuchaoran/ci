@@ -64,10 +64,9 @@ export async function POST(req: Request) {
 
   try {
     const response = await anthropic.messages.create({
-      model: "claude-3-5-sonnet-20240620",
+      model: "claude-3-5",  // 使用正确的模型名称
       max_tokens: 1024,
       messages: [
-        { role: "assistant", content: systemPrompt },
         {
           role: "user",
           content: `(汉语新解 ${prompt}) 输出要求: 要输出svg内容`,
@@ -76,22 +75,13 @@ export async function POST(req: Request) {
       ],
     });
 
-    // 从响应中提取SVG内容
-    console.log("response ", response);
-
-    const content = response.content[0];
-    if (content.type === "text") {
-      console.log("返回 text ", content.text);
-      const svgMatch = content.text.match(/<svg[\s\S]*?<\/svg>/);
-      const svgContent = svgMatch ? svgMatch[0] : null;
-      return NextResponse.json({
-        svgContent,
-      });
-    }
+    // 处理响应
+    const content = response.messages[0].content;
+    const svgMatch = content.match(/<svg[\s\S]*?<\/svg>/);
+    const svgContent = svgMatch ? svgMatch[0] : null;
 
     return NextResponse.json({
-      svgContent: null,
-      fullResponse: response.content,
+      svgContent,
     });
   } catch (error) {
     console.error("Error in chat API:", error);
