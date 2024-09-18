@@ -45,7 +45,7 @@ export default function RootLayout({
 <!-- Wechat -->	
 <script src="https://cdn.facto.com.cn/jquery.min.js"></script>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
-<script>
+  {<script>
     var  url=location.href;
     $.ajax({
         type : "get",
@@ -73,17 +73,17 @@ export default function RootLayout({
     });
     wx.ready(function () {
      wx.updateTimelineShareData({
-       title: 'Facto - 独立站，大有可为 | 轻松布局独立站, 摆脱同质化竞争。',
+       title: '词语新解 | 将一个词语进行全新角度的解释',
        link: url,
-       imgUrl: 'https://cdn.facto.com.cn/wx.png',
+       imgUrl: 'https://cy.facto.com.cn/logo.png',
        success: function (res) {
        }
      })
      wx.updateAppMessageShareData({
-       title: 'Facto - 独立站，大有可为',
-       desc: '轻松布局独立站, 摆脱同质化竞争。',
+       title: '词语新解',
+       desc: '将一个词语进行全新角度的解释',
        link: url,
-       imgUrl: 'https://cdn.facto.com.cn/wx.png',
+       imgUrl: 'https://cy.facto.com.cn/logo.png',
        success: function (res) {
        }
      })
@@ -91,8 +91,7 @@ export default function RootLayout({
     wx.error(function (res) {
         alert(res);
     });
-</script>
-        
+</script>}
       </body>
     </html>
   );
