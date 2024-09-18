@@ -68,6 +68,7 @@ export async function POST(req: Request) {
       model: "claude-3-5-sonnet-20240620",
       max_tokens: 1024,
       messages: [
+        { role: "user", content: "汉语新解 (Chinese Reinterpretation)"},
         { role: "assistant", content: systemPrompt },
         {
           role: "user",
