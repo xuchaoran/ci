@@ -1,6 +1,6 @@
 import { SITE_NAME } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { IconBrandGithub } from "@tabler/icons-react";
+import { IconBrandTiktokFilled } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -8,8 +8,8 @@ import React from "react";
 export default function Footer() {
   const pages = [
     {
-      title: "李继刚",
-      href: "https://web.okjike.com/u/752D3103-1107-43A0-BA49-20EC29D09E36",
+      title: "Facto",
+      href: "https://www.facto.com.cn",
     },
   ];
 
@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
 
           <ul className="transition-colors flex sm:flex-row flex-col hover:text-text-neutral-800 text-neutral-600 dark:text-neutral-300 list-none gap-4">
-            Inspired By{" "}
+            Powered By{" "}
             {pages.map((page, idx) => (
               <li key={"pages" + idx} className="list-none">
                 <Link
@@ -43,9 +43,9 @@ export default function Footer() {
           </p>
           <div className="flex gap-4">
             <Link href="https://github.com/tonyljx/TextWordExplain?tab=readme-ov-file">
-              <IconBrandGithub className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
+              <IconBrandTiktokFilled className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
             </Link>
-            <Link href="https://www.buymeacoffee.com/tonyliang6">
+            <Link href="https://www.buymeacoffee.com/">
               <Image
                 src="bmc-logo.svg"
                 className="w-6 h-6"

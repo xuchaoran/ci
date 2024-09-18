@@ -1,4 +1,4 @@
-export const SITE_NAME = "TextHuman";
+export const SITE_NAME = "词语新解";
 
 export const presetPrompts = ["国足", "程序员", "独立开发者"];
 
@@ -14,7 +14,7 @@ export const presetTemplates = [
   <polygon points="200,10 220,50 180,50" fill="#32CD32" opacity="0.3"/>
 
   <!-- Title -->
-  <text x="200" y="50" font-family="STKaiti, Kaiti SC, SimKai" font-size="32" fill="#333" text-anchor="middle">汉语新解</text>
+  <text x="200" y="50" font-family="STKaiti, Kaiti SC, SimKai" font-size="32" fill="#333" text-anchor="middle">词语新解</text>
   
   <!-- Divider -->
   <line x1="40" y1="70" x2="360" y2="70" stroke="#333" stroke-width="1"/>
@@ -48,7 +48,7 @@ export const presetTemplates = [
   <circle cx="200" cy="300" r="150" fill="none" stroke="#D2B48C" stroke-width="1" opacity="0.5" />
   
   <!-- Title -->
-  <text x="200" y="80" font-family="KaiTi, serif" font-size="32" fill="#4A4A4A" text-anchor="middle">汉语新解</text>
+  <text x="200" y="80" font-family="KaiTi, serif" font-size="32" fill="#4A4A4A" text-anchor="middle">词语新解</text>
   
   <!-- Separator line -->
   <line x1="50" y1="100" x2="350" y2="100" stroke="#4A4A4A" stroke-width="1" />
@@ -82,7 +82,7 @@ export const presetTemplates = [
      <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#F0EAD6"/>
   
-  <text x="200" y="50" font-family="STKaiti, Kaiti SC, SimKai" font-size="24" fill="#555" text-anchor="middle">汉语新解</text>
+  <text x="200" y="50" font-family="STKaiti, Kaiti SC, SimKai" font-size="24" fill="#555" text-anchor="middle">词语新解</text>
   
   <line x1="50" y1="70" x2="350" y2="70" stroke="#888" stroke-width="1"/>
   
@@ -110,7 +110,7 @@ export const presetTemplates = [
     <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#F0EAD6"/>
   
-  <text x="200" y="50" font-family="STKaiti, KaiTi, SimKai" font-size="32" fill="#4A4A4A" text-anchor="middle">汉语新解</text>
+  <text x="200" y="50" font-family="STKaiti, KaiTi, SimKai" font-size="32" fill="#4A4A4A" text-anchor="middle">词语新解</text>
   
   <line x1="50" y1="70" x2="350" y2="70" stroke="#4A4A4A" stroke-width="2"/>
   
@@ -144,7 +144,7 @@ export const presetTemplates = [
   <rect x="350" y="550" width="40" height="40" fill="#4169E1" opacity="0.5"/>
   
   <!-- Title -->
-  <text x="200" y="50" font-family="KaiTi, serif" font-size="24" fill="#333" text-anchor="middle">汉语新解</text>
+  <text x="200" y="50" font-family="KaiTi, serif" font-size="24" fill="#333" text-anchor="middle">词语新解</text>
   
   <!-- Divider -->
   <line x1="40" y1="70" x2="360" y2="70" stroke="#333" stroke-width="1"/>
@@ -181,7 +181,7 @@ export const presetTemplates = [
   <polygon points="200,580 220,560 240,580" fill="#D0D0D0" opacity="0.5"/>
 
   <!-- Title -->
-  <text x="200" y="50" font-family="KaiTi, serif" font-size="24" fill="#333333" text-anchor="middle">汉语新解</text>
+  <text x="200" y="50" font-family="KaiTi, serif" font-size="24" fill="#333333" text-anchor="middle">词语新解</text>
   
   <!-- Divider -->
   <line x1="40" y1="70" x2="360" y2="70" stroke="#999999" stroke-width="1"/>
@@ -215,7 +215,7 @@ export const presetTemplates = [
     <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#F0EAD6"/>
   
-  <text x="200" y="50" font-family="楷体" font-size="24" fill="#4A4A4A" text-anchor="middle">汉语新解</text>
+  <text x="200" y="50" font-family="楷体" font-size="24" fill="#4A4A4A" text-anchor="middle">词语新解</text>
   
   <line x1="50" y1="70" x2="350" y2="70" stroke="#4A4A4A" stroke-width="2"/>
   

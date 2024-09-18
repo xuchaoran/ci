@@ -15,31 +15,26 @@ export default function Header() {
             height={40}
           />
           <span className="ml-2 text-xl font-semibold text-gray-800 ">
-            TextHuman
+            
           </span>
         </Link>
       </div>
 
       <div className="flex items-center gap-3">
-        <Link
-          href="/social-card"
-          className="text-md font-semibold text-gray-600"
-        >
-          生成社交卡片
-        </Link>
+
       </div>
 
       <div className="flex items-center gap-3">
         <Link
-          href="https://github.com/tonyljx/TextWordExplain?tab=readme-ov-file"
+          href="https://github.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icons.gitHub className="w-6 h-6" />
+          <Icons.wechat className="w-6 h-6" />
         </Link>
 
         {/* <Link
-          href="https://www.buymeacoffee.com/tonyliang6"
+          href="https://www.buymeacoffee.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
