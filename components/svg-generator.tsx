@@ -228,7 +228,7 @@ export default function SvgGenerator() {
 
               <Button
                 onClick={onSubmit}
-                className="w-full text-lg bg-blue-500 hover:bg-blue-400 text-white"
+                className="w-full text-lg bg-blue-500 hover:bg-blue-600 text-white"
                 disabled={loading}
               >
                 {loading ? (
