@@ -1,6 +1,7 @@
 import { SITE_NAME } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { IconBrandTiktokFilled } from "@tabler/icons-react";
+import { IconBrandTiktok } from "@tabler/icons-react";
+import { IconBrandWechat } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -21,36 +22,17 @@ export default function Footer() {
             <Logo />
           </div>
 
-          <ul className="transition-colors flex sm:flex-row flex-col hover:text-text-neutral-800 text-neutral-600 dark:text-neutral-300 list-none gap-4">
-            Powered By{" "}
-            {pages.map((page, idx) => (
-              <li key={"pages" + idx} className="list-none">
-                <Link
-                  className="transition-colors hover:text-text-neutral-800 "
-                  href={page.href}
-                >
-                  {page.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-
           <GridLineHorizontal className="max-w-7xl mx-auto mt-8" />
         </div>
         <div className="flex sm:flex-row flex-col justify-between mt-8 items-center w-full">
-          <p className="text-neutral-500 dark:text-neutral-400 mb-8 sm:mb-0">
-            2024 &copy; {SITE_NAME}
+          <p className="text-neutral-500 dark:text-neutral-400 mb-8 sm:mb-0"><a href ="https://www.facto.com.cn" target="_blank">Facto</a> 2024 &copy;
           </p>
           <div className="flex gap-4">
-            <Link href="https://github.com/tonyljx/TextWordExplain?tab=readme-ov-file">
-              <IconBrandTiktokFilled className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
+            <Link href="https://v.douyin.com/ikfCwckU">
+              <IconBrandTiktok className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
             </Link>
-            <Link href="https://www.buymeacoffee.com/">
-              <Image
-                src="bmc-logo.svg"
-                className="w-6 h-6"
-                alt="Buy me a coffee"
-              />
+            <Link href="https://work.weixin.qq.com/ca/cawcde35ec4aed37cc">
+              <IconBrandWechat className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
             </Link>
           </div>
         </div>
