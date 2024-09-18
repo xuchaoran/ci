@@ -35,8 +35,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <script src="https://cdn.facto.com.cn/jquery.min.js"></script>
-        <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+        <script src="https://cdn.facto.com.cn/jquery.min.js" async></script>
+        <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js" async></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
