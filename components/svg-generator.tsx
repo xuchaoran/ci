@@ -185,7 +185,7 @@ export default function SvgGenerator() {
     <div className="md:container  p-4 md:p-8 min-h-[63vh]">
       <div className="flex flex-col md:flex-row gap-8">
         <div className="w-full md:w-1/2">
-          <Card className="h-full shadow-sm hover:shadow-md transition-shadow duration-300 hover:border-blue-300">
+          <Card className="h-full shadow-sm hover:shadow-md transition-shadow duration-300 hover:border-red-300">
             <CardContent className="space-y-6 p-6">
               <h2 className="text-2xl font-bold mb-4">
                 词语新解 | 给词语一个全新的解释
