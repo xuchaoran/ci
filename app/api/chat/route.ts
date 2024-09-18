@@ -67,11 +67,12 @@ export async function POST(req: Request) {
       model: "claude-3-5",  // 使用正确的模型名称
       max_tokens: 1024,
       messages: [
+        { role: "user", content: "汉语新解 (Chinese Reinterpretation)"},
+        { role: "assistant", content: systemPrompt },
         {
           role: "user",
           content: `(汉语新解 ${prompt}) 输出要求: 要输出svg内容`,
         },
-        { role: "system", content: systemPrompt }, // 将系统消息放在第二位
       ],
     });
 
