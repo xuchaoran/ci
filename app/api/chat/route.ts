@@ -5,6 +5,7 @@ import Anthropic from "@anthropic-ai/sdk";
 
 const anthropic = new Anthropic({
   apiKey: process.env["ANTHROPIC_API_KEY"],
+  baseURL: process.env["ANTHROPIC_API_URL"],
 });
 
 const systemPrompt = `
@@ -64,10 +65,9 @@ export async function POST(req: Request) {
 
   try {
     const response = await anthropic.messages.create({
-      model: "claude-3-5",  // 使用正确的模型名称
+      model: "claude-3-5-sonnet-20240620",
       max_tokens: 1024,
       messages: [
-        { role: "user", content: "汉语新解 (Chinese Reinterpretation)"},
         { role: "assistant", content: systemPrompt },
         {
           role: "user",
@@ -76,13 +76,22 @@ export async function POST(req: Request) {
       ],
     });
 
-    // 处理响应
-    const content = response.messages[0].content;
-    const svgMatch = content.match(/<svg[\s\S]*?<\/svg>/);
-    const svgContent = svgMatch ? svgMatch[0] : null;
+    // 从响应中提取SVG内容
+    console.log("response ", response);
+
+    const content = response.content[0];
+    if (content.type === "text") {
+      console.log("返回 text ", content.text);
+      const svgMatch = content.text.match(/<svg[\s\S]*?<\/svg>/);
+      const svgContent = svgMatch ? svgMatch[0] : null;
+      return NextResponse.json({
+        svgContent,
+      });
+    }
 
     return NextResponse.json({
-      svgContent,
+      svgContent: null,
+      fullResponse: response.content,
     });
   } catch (error) {
     console.error("Error in chat API:", error);
