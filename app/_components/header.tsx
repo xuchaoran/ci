@@ -14,33 +14,9 @@ export default function Header() {
             width={40}
             height={40}
           />
-          <span className="ml-2 text-xl font-semibold text-gray-800 ">
-            
-          </span>
         </Link>
       </div>
 
-      <div className="flex items-center gap-3">
-
-      </div>
-
-      <div className="flex items-center gap-3">
-        <Link
-          href="https://github.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icons.wechat className="w-6 h-6" />
-        </Link>
-
-        {/* <Link
-          href="https://www.buymeacoffee.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image src="bmc-logo.svg" className="w-6 h-6" alt="Buy me a coffee" />
-        </Link> */}
-      </div>
     </header>
   );
 }
