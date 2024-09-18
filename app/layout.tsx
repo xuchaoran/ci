@@ -1,3 +1,4 @@
+"use client"; // 将组件声明为客户端组件
 import { useEffect } from "react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
