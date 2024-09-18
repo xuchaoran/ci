@@ -275,7 +275,7 @@ export default function SvgGenerator() {
                   </Button>
                   <Button variant="outline" onClick={copyImageToClipboard}>
                     <Copy className="w-4 h-4 mr-2" />
-                    复制图片
+                    复制图片（PC端）
                   </Button>
 
                   <Button
