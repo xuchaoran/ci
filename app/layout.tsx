@@ -21,8 +21,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "词语新解 | Facto",
-  description: "将一个词语进行全新角度的解释",
+  title: "词语新解｜Facto",
+  description: "给词语一个全新角度的解释",
 };
 
 export default function RootLayout({
@@ -70,14 +70,14 @@ export default function RootLayout({
 
             wx.ready(function () {
                 wx.updateTimelineShareData({
-                    title: '词语新解 | 将一个词语进行全新角度的解释',
+                    title: '词语新解｜给词语一个全新角度的解释',
                     link: url,
                     imgUrl: 'https://cy.facto.com.cn/logo.png',
                     success: function (res) {}
                 });
                 wx.updateAppMessageShareData({
                     title: '词语新解',
-                    desc: '将一个词语进行全新角度的解释',
+                    desc: '给词语一个全新角度的解释',
                     link: url,
                     imgUrl: 'https://cy.facto.com.cn/logo.png',
                     success: function (res) {}
