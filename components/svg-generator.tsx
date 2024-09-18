@@ -62,8 +62,8 @@ export default function SvgGenerator() {
     const viewBox = svgElement.getAttribute("viewBox");
 
     // 设置更高的分辨率
-    const scale = 4;
-    const width = parseInt(svgWidth || "800");
+    const scale = 5;
+    const width = parseInt(svgWidth || "400");
     const height = parseInt(svgHeight || "600");
 
     // 创建一个新的SVG元素，保留原始尺寸和viewBox
@@ -125,8 +125,8 @@ export default function SvgGenerator() {
       const viewBox = svgElement.getAttribute("viewBox");
 
       // 设置更高的分辨率
-      const scale = 4;
-      const width = parseInt(svgWidth || "800");
+      const scale = 5;
+      const width = parseInt(svgWidth || "400");
       const height = parseInt(svgHeight || "600");
 
       // 创建一个新的SVG元素，保留原始尺寸和viewBox
@@ -188,25 +188,25 @@ export default function SvgGenerator() {
           <Card className="h-full shadow-sm hover:shadow-md transition-shadow duration-300 hover:border-blue-300">
             <CardContent className="space-y-6 p-6">
               <h2 className="text-2xl font-bold mb-4">
-                汉语新解 | 给汉语一个全新的解释
+                词语新解 | 给词语一个全新的解释
               </h2>
 
               <div className="space-y-2">
                 <h3 className="text-sm font-semibold text-gray-600">
-                  汉语输入
+                  词语输入
                 </h3>
                 <Input
                   type="text"
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                  placeholder="输入一个汉语词汇"
+                  placeholder="输入一个词语"
                   className="text-lg focus:ring-2 focus:ring-blue-200"
                 />
               </div>
 
               <div className="space-y-3">
                 <h3 className="text-sm font-semibold text-gray-600">
-                  推荐词汇
+                  推荐词语
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {presetTemplates.map((item) => (
@@ -234,7 +234,7 @@ export default function SvgGenerator() {
                 {loading ? (
                   <Loader2 className="animate-spin w-5 h-5 mr-2" />
                 ) : (
-                  "生成汉语解释"
+                  "生成词语解释"
                 )}
               </Button>
             </CardContent>
@@ -295,7 +295,7 @@ export default function SvgGenerator() {
           ) : (
             <Card className="h-full py-8 md:py-10">
               <CardContent className="flex items-center justify-center h-full text-gray-500">
-                生成的 汉语解释 将显示在这里
+                生成的 词语解释 将显示在这里
               </CardContent>
             </Card>
           )}
@@ -303,7 +303,7 @@ export default function SvgGenerator() {
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-bold mb-6">汉语新解例子</h2>
+        <h2 className="text-2xl font-bold mb-6">词语新解例子</h2>
         <PresetTemplateGrid
           templates={presetTemplates}
           onSelect={handleTemplateSelect}
