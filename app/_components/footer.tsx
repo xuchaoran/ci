@@ -7,12 +7,6 @@ import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
-  const pages = [
-    {
-      title: "Facto",
-      href: "https://www.facto.com.cn",
-    },
-  ];
 
   return (
     <div className="border-t border-neutral-100 dark:border-white/[0.1] px-8 py-10 bg-white dark:bg-neutral-950 w-full relative overflow-hidden">
@@ -57,7 +51,7 @@ const GridLineHorizontal = ({
           "--height": "1px",
           "--width": "5px",
           "--fade-stop": "90%",
-          "--offset": offset || "200px", //-100px if you want to keep the line inside
+          "--offset": offset || "100px", //-100px if you want to keep the line inside
           "--color-dark": "rgba(255, 255, 255, 0.2)",
           maskComposite: "exclude",
         } as React.CSSProperties
