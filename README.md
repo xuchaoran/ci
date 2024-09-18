@@ -1,7 +1,5 @@
 # 汉语新解 (Chinese Reinterpretation)
 
-在线体验地址: [https://texthuman.ai](https://texthuman.ai)
-
 **项目预览**
 ![首页图 1](https://imgc.cc/2024/09/12/66e2c95e09711.jpg)
 
