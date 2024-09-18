@@ -5,7 +5,6 @@ import Anthropic from "@anthropic-ai/sdk";
 
 const anthropic = new Anthropic({
   apiKey: process.env["ANTHROPIC_API_KEY"],
-  baseURL: process.env["ANTHROPIC_API_URL"],
 });
 
 const systemPrompt = `
@@ -34,6 +33,7 @@ const systemPrompt = `
 (setq design-rule "合理使用负空间，整体排版要有呼吸感"
 design-principles '(干净 简洁 典雅))
 
+
 (设置画布 '(viewBox "0 0 400 600" 边距 20))
 (标题字体 '毛笔楷体)
 (自动缩放 '(最小字号 16))
@@ -58,13 +58,11 @@ design-principles '(干净 简洁 典雅))
 ;; 2. 之后调用主函数 (汉语新解 用户输入)
 `;
 
-// 处理 POST 请求
+// (设置画布 '(宽度 400 高度 600 边距 20))
 export async function POST(req: Request) {
-  try {
-    // 获取请求中的 prompt
-    const { prompt } = await req.json();
+  const { prompt } = await req.json();
 
-    // 向 Anthropic API 发送请求
+  try {
     const response = await anthropic.messages.create({
       model: "claude-3-5-sonnet-20240620",
       max_tokens: 1024,
@@ -77,24 +75,17 @@ export async function POST(req: Request) {
       ],
     });
 
-    // 打印响应以进行调试
-    console.log("Anthropic API response:", response);
+    // 从响应中提取SVG内容
+    console.log("response ", response);
 
-    // 从响应中提取文本内容
-    const content = response?.content?.[0];
-    if (content && content.type === "text") {
-      console.log("Response text:", content.text);
-
-      // 使用正则表达式提取 SVG 内容
+    const content = response.content[0];
+    if (content.type === "text") {
+      console.log("返回 text ", content.text);
       const svgMatch = content.text.match(/<svg[\s\S]*?<\/svg>/);
       const svgContent = svgMatch ? svgMatch[0] : null;
-
-      // 返回提取到的 SVG 内容
       return NextResponse.json({
         svgContent,
       });
-    } else {
-      console.log("No text response or incorrect format.");
     }
 
     return NextResponse.json({
@@ -102,18 +93,10 @@ export async function POST(req: Request) {
       fullResponse: response.content,
     });
   } catch (error) {
-    // 错误处理
     console.error("Error in chat API:", error);
     return NextResponse.json(
       { error: "Failed to generate response" },
       { status: 500 }
     );
   }
-}
-
-// 处理 GET 请求，提示用户需要使用 POST 请求
-export async function GET() {
-  return NextResponse.json({
-    message: "This API only supports POST requests. Please send a POST request with a valid prompt.",
-  });
 }
