@@ -200,7 +200,7 @@ export default function SvgGenerator() {
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   placeholder="输入一个词语"
-                  className="text-lg focus:ring-2 focus:ring-blue-200"
+                  className="text-lg focus:ring-2 focus:ring-red-200"
                 />
               </div>
 
@@ -228,7 +228,7 @@ export default function SvgGenerator() {
 
               <Button
                 onClick={onSubmit}
-                className="w-full text-lg bg-blue-600 hover:bg-blue-700 text-white"
+                className="w-full text-lg bg-red-600 hover:bg-red-700 text-white"
                 disabled={loading}
               >
                 {loading ? (
@@ -243,7 +243,7 @@ export default function SvgGenerator() {
 
         <div className="w-full md:w-1/2">
           {loading ? (
-            <Card className="h-full shadow-sm hover:shadow-md transition-shadow duration-300 hover:border-blue-300 py-8 md:py-10">
+            <Card className="h-full shadow-sm hover:shadow-md transition-shadow duration-300 hover:border-red-300 py-8 md:py-10">
               <CardContent className="flex items-center justify-center h-full">
                 <div className="animate-pulse flex space-x-4">
                   <div className="rounded-full bg-slate-300 h-10 w-10"></div>
@@ -261,7 +261,7 @@ export default function SvgGenerator() {
               </CardContent>
             </Card>
           ) : svg ? (
-            <Card className="h-full shadow-sm hover:shadow-md transition-shadow duration-300 hover:border-blue-300">
+            <Card className="h-full shadow-sm hover:shadow-md transition-shadow duration-300 hover:border-red-300">
               <CardContent className="p-6 flex flex-col items-center justify-center h-full">
                 <div
                   ref={svgRef}
