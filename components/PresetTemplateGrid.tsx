@@ -51,7 +51,7 @@ const PresetTemplateGrid: React.FC<PresetTemplateGridProps> = ({
     const { width, height } = getSvgDimensions(svgElement);
 
     // 设置更高的分辨率
-    const scale = 5;
+    const scale = 4;
     const scaledWidth = width * scale;
     const scaledHeight = height * scale;
 
