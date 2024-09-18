@@ -141,7 +141,7 @@ const PresetTemplateGrid: React.FC<PresetTemplateGridProps> = ({
                 className="w-full h-full"
               />
             </div>
-            <h3 className="text-lg font-semibold mb-2 text-center group-hover:text-blue-600 transition-colors duration-300">
+            <h3 className="text-lg font-semibold mb-2 text-center group-hover:text-red-600 transition-colors duration-300">
               {template.prompt}
             </h3>
             <div className="flex flex-col md:flex-row gap-2 justify-center">
