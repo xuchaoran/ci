@@ -42,6 +42,57 @@ export default function RootLayout({
         <Footer />
         <ToastContainer />
         <Toaster richColors position="top-right" />
+<!-- Wechat -->	
+<script src="https://cdn.facto.com.cn/jquery.min.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+<script>
+    var  url=location.href;
+    $.ajax({
+        type : "get",
+        url : "https://www.facto.com.cn/jssdk.php?url="+url,
+        dataType : "jsonp",
+        jsonp: "callback",
+        jsonpCallback:"success_jsonpCallback",
+        success : function(data){
+            console.log(data)
+            wx.config({
+                debug: false,
+                appId: data.appId,
+                timestamp: data.timestamp,
+                nonceStr: data.nonceStr,
+                signature: data.signature,
+                jsApiList: [
+                    'updateAppMessageShareData',
+                    'updateTimelineShareData',
+                ]
+            });
+        },
+        error:function(data){
+            alert("连接失败！");
+        }
+    });
+    wx.ready(function () {
+     wx.updateTimelineShareData({
+       title: 'Facto - 独立站，大有可为 | 轻松布局独立站, 摆脱同质化竞争。',
+       link: url,
+       imgUrl: 'https://cdn.facto.com.cn/wx.png',
+       success: function (res) {
+       }
+     })
+     wx.updateAppMessageShareData({
+       title: 'Facto - 独立站，大有可为',
+       desc: '轻松布局独立站, 摆脱同质化竞争。',
+       link: url,
+       imgUrl: 'https://cdn.facto.com.cn/wx.png',
+       success: function (res) {
+       }
+     })
+    });
+    wx.error(function (res) {
+        alert(res);
+    });
+</script>
+        
       </body>
     </html>
   );
