@@ -62,7 +62,7 @@ export default function SvgGenerator() {
     const viewBox = svgElement.getAttribute("viewBox");
 
     // 设置更高的分辨率
-    const scale = 5;
+    const scale = 4;
     const width = parseInt(svgWidth || "400");
     const height = parseInt(svgHeight || "600");
 
@@ -125,7 +125,7 @@ export default function SvgGenerator() {
       const viewBox = svgElement.getAttribute("viewBox");
 
       // 设置更高的分辨率
-      const scale = 5;
+      const scale = 4;
       const width = parseInt(svgWidth || "400");
       const height = parseInt(svgHeight || "600");
 
