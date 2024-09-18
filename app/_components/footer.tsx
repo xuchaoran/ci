@@ -19,8 +19,7 @@ export default function Footer() {
           <GridLineHorizontal className="max-w-7xl mx-auto mt-8" />
         </div>
         <div className="flex sm:flex-row flex-col justify-between mt-8 items-center w-full">
-          <p className="text-neutral-500 dark:text-neutral-400 mb-8 sm:mb-0"><a href ="https://www.facto.com.cn" target="_blank">Facto</a> &copy; 2024 / 深圳发途网络科技有限公司 <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2023001465号</a>
-          </p>
+          <p className="text-neutral-500 dark:text-neutral-400 mb-8 sm:mb-0"><a href ="https://www.facto.com.cn" target="_blank">Facto</a> &copy; 2024 / 深圳发途网络科技有限公司</p>
           <div className="flex gap-4">
             <Link href="https://v.douyin.com/ikfCwckU">
               <IconBrandTiktok className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
