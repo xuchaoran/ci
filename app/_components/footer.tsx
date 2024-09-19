@@ -1,6 +1,5 @@
 import { SITE_NAME } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { IconBrandTiktok } from "@tabler/icons-react";
 import { IconBrandWechat } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
