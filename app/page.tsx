@@ -13,7 +13,7 @@ export default function Home() {
        
           <WordRotate
             className="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-sky-500"
-            words={["国足", "程序员", "打工人", "天选之子"]}
+            words={["社畜", "程序员", "边界感", "打工人", "内卷", "天选之子", "996", "躺平", "单身", "公务员", "国足"]}
           />
 
         </h2>
