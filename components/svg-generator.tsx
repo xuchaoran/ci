@@ -294,8 +294,8 @@ export default function SvgGenerator() {
             </Card>
           ) : (
             <Card className="h-full py-8 md:py-10">
-              <CardContent className="flex items-center justify-center h-full text-gray-500">
-                生成的 词语解释 将显示在这里
+              <CardContent className="flex items-center justify-center h-full text-gray-500 font-medium">
+                生成的词语解释将显示在这里
               </CardContent>
             </Card>
           )}
