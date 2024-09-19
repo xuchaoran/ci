@@ -1,6 +1,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { IconBrandTiktok } from "@tabler/icons-react";
 
 export default function Header() {
   return (
@@ -17,6 +18,11 @@ export default function Header() {
         </Link>
       </div>
 
+      <div className="flex items-center gap-3">
+            <Link href="https://v.douyin.com/ikfCwckU" target="_blank">
+              <IconBrandTiktok className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
+            </Link>
+      </div>
     </header>
   );
 }

@@ -12,7 +12,7 @@ export default function Footer() {
     <div className="border-t border-neutral-100 dark:border-white/[0.1] px-8 py-10 bg-white dark:bg-neutral-950 w-full relative overflow-hidden">
       <div className="max-w-7xl mx-auto text-sm text-neutral-500  justify-between items-start  md:px-8">
         <div className="flex flex-col items-center justify-center w-full relative">
-          <div className="mr-0 md:mr-0  md:flex mb-4">
+          <div className="mr-0 md:mr-0  md:flex mb-0">
             <Logo />
           </div>
 
@@ -21,10 +21,7 @@ export default function Footer() {
         <div className="flex sm:flex-row flex-col justify-between mt-8 items-center w-full">
           <p className="text-neutral-500 dark:text-neutral-400 mb-8 sm:mb-0"><a href ="https://www.facto.com.cn" target="_blank">Facto</a> &copy; 2024 / 深圳发途网络科技有限公司</p>
           <div className="flex gap-4">
-            <Link href="https://v.douyin.com/ikfCwckU">
-              <IconBrandTiktok className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
-            </Link>
-            <Link href="https://work.weixin.qq.com/ca/cawcde35ec4aed37cc">
+            <Link href="https://work.weixin.qq.com/ca/cawcde35ec4aed37cc" target="_blank">
               <IconBrandWechat className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
             </Link>
           </div>
