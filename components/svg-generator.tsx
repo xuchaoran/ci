@@ -188,7 +188,7 @@ export default function SvgGenerator() {
           <Card className="h-full shadow-sm hover:shadow-md transition-shadow duration-300 hover:border-blue-300">
             <CardContent className="space-y-6 p-6">
               <h2 className="text-lg font-bold mb-4">
-                词语新解 | 给词语一个全新的解释
+                给词语一个全新的解释
               </h2>
 
               <div className="space-y-2">
@@ -199,7 +199,7 @@ export default function SvgGenerator() {
                   type="text"
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                  placeholder="输入一个词语"
+                  placeholder="请输入一个词语"
                   className="text-md focus:ring-2 focus:ring-blue-200 font-medium"
                 />
               </div>
