@@ -187,12 +187,12 @@ export default function SvgGenerator() {
         <div className="w-full md:w-1/2">
           <Card className="h-full shadow-sm hover:shadow-md transition-shadow duration-300 hover:border-blue-300">
             <CardContent className="space-y-6 p-6">
-              <h2 className="text-2xl font-bold mb-4">
+              <h2 className="text-lg font-bold mb-4">
                 词语新解 | 给词语一个全新的解释
               </h2>
 
               <div className="space-y-2">
-                <h3 className="text-sm font-semibold text-gray-600">
+                <h3 className="text-md font-semibold text-gray-600">
                   词语输入
                 </h3>
                 <Input
@@ -200,12 +200,12 @@ export default function SvgGenerator() {
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   placeholder="输入一个词语"
-                  className="text-lg focus:ring-2 focus:ring-blue-200"
+                  className="text-md focus:ring-2 focus:ring-blue-200 font-medium"
                 />
               </div>
 
               <div className="space-y-3">
-                <h3 className="text-sm font-semibold text-gray-600">
+                <h3 className="text-md font-semibold text-gray-600">
                   推荐词语
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -228,7 +228,7 @@ export default function SvgGenerator() {
 
               <Button
                 onClick={onSubmit}
-                className="w-full text-lg bg-blue-500 hover:bg-blue-600 text-white"
+                className="w-full text-md bg-blue-500 hover:bg-blue-600 text-white"
                 disabled={loading}
               >
                 {loading ? (
