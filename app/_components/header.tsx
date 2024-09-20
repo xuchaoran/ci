@@ -12,8 +12,8 @@ export default function Header() {
             src="/logo.svg"
             className="rounded"
             alt="Logo"
-            width={36}
-            height={36}
+            width={38}
+            height={38}
           />
         </Link>
       </div>
